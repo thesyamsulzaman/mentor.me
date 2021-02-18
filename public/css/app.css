@@ -574,8 +574,6 @@ video {
 }
 
 .card-tab.active {
-  --tw-border-opacity: 1;
-  border-color: rgba(46, 46, 54, var(--tw-border-opacity));
   border-bottom-width: 4px;
   font-weight: 700;
 }
@@ -627,7 +625,7 @@ video {
 /*--------*/
 
 .btn {
-  border-radius: 0.25rem;
+  border-radius: 0.375rem;
   font-weight: 700;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -703,7 +701,8 @@ video {
 
 .card {
   --tw-border-opacity: 1;
-  border-color: rgba(156, 163, 175, var(--tw-border-opacity));
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+  border-radius: 0.375rem;
   border-width: 1px;
 }
 
