@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MentorsController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,7 @@ use App\Http\Controllers\MentorsController;
 */
 
 Route::resource('mentors',MentorsController::class);
+Route::resource('admin',AdminController::class);
 
 Route::get('/', function () {
   $categories = array(
