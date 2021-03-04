@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@include('components.navbar')
 
 @section('content')
   <section
@@ -76,8 +75,7 @@
         class="mt-3 flex flex-col items-center justify-center align-center md:flex-row md:flex-wrap md:align-center"
       >
         <div
-          class="card bg-white p-3 shadow-lg m-2 rounded-md"
-          style="max-width: 300px;"
+          class="card bg-white p-3 shadow-lg m-2 rounded-md flex-1"
         >
           <span class="text-xs bg-gray-300 px-2 py-1 rounded w-auto"
             >#lawyer</span
@@ -96,8 +94,7 @@
         </div>
 
         <div
-          class="card bg-white p-3 shadow-md m-2"
-          style="max-width: 300px;"
+          class="card bg-white p-3 shadow-md m-2 flex-1"
         >
           <span class="text-xs bg-gray-300 px-2 py-1 rounded w-auto"
             >#finance</span
@@ -118,8 +115,7 @@
         </div>
 
         <div
-          class="card bg-white p-3 shadow-md m-2"
-          style="max-width: 300px;"
+          class="card bg-white p-3 shadow-md m-2 flex-1"
         >
           <span class="text-xs bg-gray-300 px-2 py-1 rounded w-auto"
             >#software-engineer</span

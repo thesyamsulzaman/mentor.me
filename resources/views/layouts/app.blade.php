@@ -6,9 +6,8 @@
     <title>Mentor.me | Guide you right</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
-
   <body>
-
+    @include('components.navbar')
     @yield('content')
 
    <script src="{{ asset('js/script.js')}}"></script>
