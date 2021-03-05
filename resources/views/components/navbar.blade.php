@@ -12,10 +12,22 @@
       </div>
 
       <div class="dropdown px-5 pb-3 hidden md:pb-0 md:flex md:block" id="menu">
-        <a href="about.html" class=" py-2 px-3 block text-white rounded hover:bg-gray-900">About</a>
-        <a href="/mentors" class=" py-2 px-3 block text-white rounded hover:bg-gray-900">Browse Mentors</a>
-        <a href="/login" class=" py-2 px-3 block text-white rounded hover:bg-gray-900">Login</a>
-        <a href="/register" class=" py-2 px-3 block text-white rounded hover:bg-gray-900">Register</a>
+        <a href="about.html" class=" py-2 px-3 block text-white rounded hover:bg-black">About</a>
+        <a href="/mentors" class=" py-2 px-3 block text-white rounded hover:bg-black">Browse Mentors</a>
+
+        @auth
+          <a href="/login" class=" py-2 px-3 block text-white rounded hover:bg-black">Hi User </a>
+          <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <input class="py-2 px-3 block text-white rounded hover:bg-black" type="submit" name="logout" value="Logout">
+          </form>
+        @endauth
+
+        @guest
+          <a href="/login" class=" py-2 px-3 block text-white rounded hover:bg-black">Login</a>
+          <a href="/register" class=" py-2 px-3 block text-white rounded hover:bg-black">Register</a>
+        @endguest
+
       </div>
     </nav>
-    </header>
+ </header>

@@ -1,3 +1,4 @@
+@include('components.navbar')
 @extends('layouts.app')
 
 
@@ -15,16 +16,17 @@
           <div class="form-group">
             <label
               class="block text-gray-700 text-sm font-bold mb-2"
-              for="last_name"
+              for="first_name"
             >
               First Name
             </label>
             <input
-              class="form-control border border-red-900"
+              class="form-control @error('first_name') border-2 border-red-600 @enderror"
               id="first_name"
               name="first_name"
               type="text"
               placeholder="First Name"
+              value="{{ old('first_name') }}"
             />
             @error('first_name')
                <p class="text-red-500 text-xs mt-1">
@@ -41,12 +43,20 @@
               Last Name
             </label>
             <input
-              class="form-control"
+              class="form-control @error('last_name') border-2 border-red-600 @enderror"
               id="last_name"
               name="last_name"
               type="text"
               placeholder="Last Name"
+              value="{{ old('last_name') }}"
+
             />
+
+            @error('last_name')
+               <p class="text-red-500 text-xs mt-1">
+                {{ $message }}
+               </p>
+            @enderror
           </div>
 
           <div class="form-group">
@@ -57,12 +67,20 @@
               Username
             </label>
             <input
-              class="form-control"
+              class="form-control @error('username') border-2 border-red-600 @enderror"
               id="username"
               name="username"
               type="text"
               placeholder="Username"
+              value="{{ old('username') }}"
+
             />
+
+            @error('username')
+               <p class="text-red-500 text-xs mt-1">
+                {{ $message }}
+               </p>
+            @enderror
           </div>
 
           <div class="form-group">
@@ -73,12 +91,20 @@
               Email
             </label>
             <input
-              class="form-control"
+              class="form-control @error('email') border-2 border-red-600 @enderror"
               name="email"
               id="email"
               type="email"
               placeholder="Email"
+              value="{{ old('email') }}"
+
             />
+
+            @error('email')
+               <p class="text-red-500 text-xs mt-1">
+                {{ $message }}
+               </p>
+            @enderror
           </div>
 
           <div class="form-group">
@@ -89,12 +115,18 @@
               Password
             </label>
             <input
-              class="form-control"
+              class="form-control @error('password') border-2 border-red-600 @enderror"
               id="password"
               type="password"
+              name="password"
               placeholder="******************"
             />
-            <!--<p class="text-red-500 text-xs italic">Please choose a password.</p>-->
+
+            @error('password')
+               <p class="text-red-500 text-xs mt-1">
+                {{ $message }}
+               </p>
+            @enderror
           </div>
           <div class="form-group">
             <label
@@ -105,12 +137,16 @@
             </label>
             <input
               class="form-control"
-              id="password"
+              id="password_confirmation"
               type="password"
               name="password_confirmation"
               placeholder="******************"
             />
             <!--<p class="text-red-500 text-xs italic">Please choose a password.</p>-->
+          </div>
+          <div class="form-group flex items-center">
+            <input type="checkbox" name="is_mentor">
+            <label class="ml-2">Register as mentor</label>
           </div>
           <div class="mt-4">
             <input type="submit" value="Register" class="btn btn-black btn-block"/>
