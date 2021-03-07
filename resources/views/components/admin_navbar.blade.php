@@ -33,9 +33,11 @@
           class=" py-2 px-3  block text-white rounded hover:bg-gray-900"
           >Gigs</a
         >
+        @auth
         <a href="./signup.html" class="md:ml-auto py-2 px-3  block text-white rounded hover:bg-gray-900">
-          Hi, User
+          Hi, {{ Auth::user()->first_name }}
         </a>
+        @endauth
       </div>
     </nav>
   </header>

@@ -1,6 +1,10 @@
 @include('components.navbar')
 @extends('layouts.app')
 
+@section('title')
+  MENTOR.ME | Register
+@endsection
+
 
 @section('content')
     <section

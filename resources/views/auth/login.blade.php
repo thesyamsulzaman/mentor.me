@@ -1,9 +1,13 @@
 @include('components.navbar')
 @extends('layouts.app')
 
+@section('title')
+  MENTOR.ME | Login
+@endsection
+
 @section('content')
     <section
-      class="login bg-soft-white h-screen flex flex-row items-start justify-center mt-5"
+      class="login bg-soft-white h-auto flex flex-row items-start justify-center mt-5 py-12"
     >
       <div class="container md:max-w-md">
         <form action="{{ route('login') }}" method="POST" class="bg-white shadow-lg rounded px-6 pt-6 pb-8 md:my-4 mt-3">

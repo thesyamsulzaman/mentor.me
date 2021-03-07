@@ -12,8 +12,11 @@
       </div>
 
       <div class="dropdown px-5 pb-3 hidden md:pb-0 md:flex md:block" id="menu">
+
         <a href="about.html" class=" py-2 px-3 block text-white rounded hover:bg-black">About</a>
-        <a href="/mentors" class=" py-2 px-3 block text-white rounded hover:bg-black">Browse Mentors</a>
+        <a href="/mentors" class="py-2 px-3 block text-white rounded @if (Route::has('mentors')) bg-black @endif hover:bg-black ">
+         Browse Mentors
+        </a>
 
         @auth
           <a href="/login" class=" py-2 px-3 block text-white rounded hover:bg-black">Hi User </a>

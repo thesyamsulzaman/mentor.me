@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+
 
 use App\Http\Controllers\Controller;
 
@@ -12,13 +14,11 @@ use App\Models\User;
 
 class RegisterController extends Controller
 {
-  public function index() 
-  {
+  public function index() {
     return view('auth.register');
   }
 
   public function store(Request $request) {
-
 
     $this->validate($request, [
       'first_name' => 'required|max:255',
@@ -38,8 +38,7 @@ class RegisterController extends Controller
 
     auth()->attempt($request->only('email', 'password'));
 
-    return redirect('/');
-
+    return redirect('/admin');
 
   }
 }
