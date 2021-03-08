@@ -19,11 +19,7 @@
         </a>
 
         @auth
-          <a href="/login" class=" py-2 px-3 block text-white rounded hover:bg-black">Hi User </a>
-          <form action="{{ route('logout') }}" method="POST">
-            @csrf
-            <input class="py-2 px-3 block text-white rounded hover:bg-black" type="submit" name="logout" value="Logout">
-          </form>
+          <a href="" class=" py-2 px-3 block text-white rounded hover:bg-black">Dashboard</a>
         @endauth
 
         @guest

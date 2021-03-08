@@ -76,6 +76,11 @@
             @enderror
           </div>
 
+          <div class="form-group flex items-center">
+            <input type="checkbox" name="remember">
+            <label class="ml-2">Remember me</label>
+          </div>
+
           <div class="mt-4">
             <input type="submit" value="Login" class="btn btn-black btn-block"/>
           </div>

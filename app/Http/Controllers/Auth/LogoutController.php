@@ -10,6 +10,8 @@ class LogoutController extends Controller
 
 	public function store() 
 	{
-		dd("Hit the logout");
+		auth()->logout();
+
+		return redirect()->route("home");
 	}
 }

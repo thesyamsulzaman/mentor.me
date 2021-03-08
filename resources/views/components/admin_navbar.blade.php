@@ -34,9 +34,14 @@
           >Gigs</a
         >
         @auth
-        <a href="./signup.html" class="md:ml-auto py-2 px-3  block text-white rounded hover:bg-gray-900">
-          Hi, {{ Auth::user()->first_name }}
-        </a>
+        <div class="flex md:ml-auto">
+          <a href="#" class="py-2 px-3  block text-white rounded hover:bg-gray-900">
+            Hi, {{ Auth::user()->first_name }}
+          </a>
+          <a href="{{ route('logout') }}" class="py-2 px-3  block text-white rounded hover:bg-gray-900">
+            Logout
+          </a>
+        </div>
         @endauth
       </div>
     </nav>
