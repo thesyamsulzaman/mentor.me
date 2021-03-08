@@ -77,8 +77,8 @@
           </div>
 
           <div class="form-group flex items-center">
-            <input type="checkbox" name="remember">
-            <label class="ml-2">Remember me</label>
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember" class="ml-2">Remember me</label>
           </div>
 
           <div class="mt-4">

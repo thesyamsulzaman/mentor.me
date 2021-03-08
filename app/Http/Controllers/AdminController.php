@@ -17,6 +17,7 @@ class AdminController extends Controller
      */
     public function index()
     {
+      dd(auth()->user()->gigs);
       return view('admin.index');
     }
 

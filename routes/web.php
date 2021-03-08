@@ -13,7 +13,10 @@ use App\Http\Controllers\Auth\{
 };
 
 
+Route::resource('admin',AdminController::class);
+
 Route::get('/', [HomeController::class, 'index'])->name("home");
+Route::get('/mentors', function() { return view('mentors.index'); });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
@@ -23,7 +26,5 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/logout', [LogoutController::class, 'store'])->name('logout');
 
-Route::resource('mentors',MentorsController::class);
 
-Route::resource('admin',AdminController::class);
 
