@@ -19,7 +19,7 @@
         </a>
 
         @auth
-          <a href="/admin" class=" py-2 px-3 block text-white rounded hover:bg-black">Dashboard</a>
+          <a href="/dashboard" class=" py-2 px-3 block text-white rounded hover:bg-black">Dashboard</a>
         @endauth
 
         @guest

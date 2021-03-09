@@ -49,4 +49,8 @@ class User extends Authenticatable
     public function gigs() {
       return $this->hasMany(Gig::class);
     }
+
+    public function isMentor($checkbox) {
+        return $checkbox == "on" ? 1 : 0;
+    }
 }

@@ -27,7 +27,7 @@ class LoginController extends Controller
 			return back()->with('status', 'Wrong username or password');
 		}
 
-		return redirect('/admin');
+		return redirect('admin/dashboard');
 
 
 
